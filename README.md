@@ -1,7 +1,15 @@
 Leaked my things so yh use if want
 
+HOW TO USE IF WANT TO USE IT FAST
 
-How to use
+PUT addToExecutor.lua into your executor
+
+then execute and done
+
+
+
+
+How to use UR SELF
 
 Add The File Named addToExecutor.lua To Your Executor
 
