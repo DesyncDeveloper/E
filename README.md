@@ -6,13 +6,6 @@ PUT addToExecutor.lua into your executor
 
 then execute and done
 
-
-EXTRA LAZY PEOPLE CAN USE
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/DesyncDeveloper/E/main/addToExecutor.lua"))
-
-
-
 How to use UR SELF
 
 Add The File Named addToExecutor.lua To Your Executor
