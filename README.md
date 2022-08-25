@@ -3,7 +3,7 @@ Leaked my things so yh use if want
 
 How to use
 
-Add The File Named Add To Synapse To Your Synapse OR Krnl
+Add The File Named addToExecutor.lua To Your Executor
 
 Then
 
