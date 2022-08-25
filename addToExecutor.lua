@@ -1,4 +1,4 @@
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/ZuprizeDev/BGSGUI/main/main"))
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/DesyncDeveloper/E/main/GUI.lua"))
 local Window = Library.CreateLib("BGS Auto Trade", "Midnight")
 local Player = game.Players.LocalPlayer
 local TradeFrame = Player.PlayerGui.ScreenGui.TradeFrame
