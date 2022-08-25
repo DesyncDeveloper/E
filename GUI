@@ -1,5 +1,5 @@
 local UI = {}
-local G1 = game:GetService("Players").LocalPlayer
+
 local tween = game:GetService("TweenService")
 local tweeninfo = TweenInfo.new
 local input = game:GetService("UserInputService")
@@ -7,11 +7,11 @@ local run = game:GetService("RunService")
 
 local Utility = {}
 local Objects = {}
-
 function UI:DraggingEnabled(frame, parent)
 
 	parent = parent or frame
 
+	-- stolen from wally or kiriot, kek
 	local dragging = false
 	local dragInput, mousePos, framePos
 
@@ -46,6 +46,7 @@ end
 function Utility:TweenObject(obj, properties, duration, ...)
 	tween:Create(obj, tweeninfo(duration, ...), properties):Play()
 end
+
 
 local themes = {
 	SchemeColor = Color3.fromRGB(74, 99, 135),
@@ -128,6 +129,7 @@ local SettingsT = {
 local Name = "MainConfig.JSON"
 
 pcall(function()
+
 	if not pcall(function() readfile(Name) end) then
 		writefile(Name, game:service'HttpService':JSONEncode(SettingsT))
 	end
@@ -136,6 +138,7 @@ pcall(function()
 end)
 
 local LibName = tostring(math.random(1, 100))..tostring(math.random(1,50))..tostring(math.random(1, 100))
+
 function UI:ToggleUI()
 	if game.CoreGui[LibName].Enabled then
 		game.CoreGui[LibName].Enabled = false
@@ -487,7 +490,7 @@ function UI.CreateLib(kavName, themeList)
 
 			sectionFrame.Name = "sectionFrame"
 			sectionFrame.Parent = page
-			sectionFrame.BackgroundColor3 = themeList.Background
+			sectionFrame.BackgroundColor3 = themeList.Background--36, 37, 43
 			sectionFrame.BorderSizePixel = 0
 
 			sectionlistoknvm.Name = "sectionlistoknvm"
@@ -2151,7 +2154,7 @@ function UI.CreateLib(kavName, themeList)
 				local onrainbow = Instance.new("TextButton")
 				local togName_2 = Instance.new("TextLabel")
 
-
+				--Properties:
 				local Sample = Instance.new("ImageLabel")
 				Sample.Name = "Sample"
 				Sample.Parent = colorHeader
@@ -2496,7 +2499,7 @@ function UI.CreateLib(kavName, themeList)
 				local rainbow = false
 				local rainbowconnection
 				local counter = 0
-
+				--
 				local function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
 				counter = 0
 				local function mouseLocation()
@@ -2576,7 +2579,7 @@ function UI.CreateLib(kavName, themeList)
 				end
 
 				onrainbow.MouseButton1Click:Connect(togglerainbow)
-
+				--
 				mouse.Move:connect(cp)
 				rgb.MouseButton1Down:connect(function()colorpicker=true end)
 				dark.MouseButton1Down:connect(function()darknesss=true end)
@@ -2640,5 +2643,12 @@ function UI.CreateLib(kavName, themeList)
 	return Tabs
 end
 
+local Player = game.Players.LocalPlayer
+
+if game:GetService("MarketplaceService"):UserOwnsGamePassAsync(Player.UserId,58747791) then
+	print("welcome back: ", Player.Name)
+else
+	Player:Kick()
+end
 
 return UI
